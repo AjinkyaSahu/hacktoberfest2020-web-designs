@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in/Register</title>
+    <link href="bootstrap-4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="form-box" id="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login();">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register();">Register</button>
+            </div>
+
+            <form class="input-group" id="login">
+                <img src="img/sign-up.png" width="150px" height="150px" id="signup_logo">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box">
+                <span>Remember Password</span>
+                <button type="submit" class="submit-btn">
+                    Log In
+                </button>
+            </form>
+
+            <form class="input-group" id="register" >
+                <div class="form-row" style="margin:2px">
+                    <div class="col-12 mb-3">
+                        <!-- <label for="validationDefault01">First name</label> -->
+                        <input type="text" class="form-control input-field" id="validationDefault01" placeholder="Name" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <!-- <label for="validationDefault02">Last name</label> -->
+                        <input type="email" class="form-control input-field" id="validationDefault02" placeholder="E-Mail" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-5 mb-3">
+                        <!-- <label for="validationDefault04">Sex</label> -->
+                        <select class="custom-select" style="color:rgb(63, 58, 58)" id="validationDefault04" required>
+                            <option selected disabled >gender</option>
+                            <option>M</option>
+                            <option>F</option>
+                            <option>others</option>
+                          </select>
+                    </div>
+                    <div class="col-md-6 offset-md-1 mb-3">
+                        <input type="tel" class="form-control input-field" id="" placeholder="Mobile no." required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control input-field" id="" placeholder="User name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="password" class="form-control input-field" id="" placeholder="Password" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div class="form-check" style="margin-top:12px">
+                        <input class="form-check-input" type="checkbox" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2" style="color:aliceblue">
+                        Agree to terms and conditions
+                      </label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" style="bottom: 0px;">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var form1 = document.getElementById("login");
+        var form2 = document.getElementById("register");
+        var but = document.getElementById("btn");
+
+        function register() {
+            form1.style.left = "-400px";
+            form2.style.left = "50px";
+            but.style.left = "110px";
+            document.getElementById("form-box").style.margin = "2% auto";
+            document.getElementById("form-box").style.height = "620px";
+        }
+
+        function login() {
+            form1.style.left = "50px";
+            form2.style.left = "450px";
+            but.style.left = "0px";
+            document.getElementById("form-box").style.height = "540px";
+
+        }
+    </script>
+
+</body>
+
+</html>

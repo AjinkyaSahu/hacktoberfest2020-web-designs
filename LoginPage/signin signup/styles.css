@@ -1,0 +1,185 @@
+body {}
+
+.jumbotron {
+    background: url(Img/cover2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Services */
+
+.services {
+    background: none;
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+.services:focus {
+    outline: none;
+}
+
+.services::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translate(-130px) skew(-15deg);
+}
+
+.services::after {
+    display: block;
+    position: absolute;
+    content: '';
+    background: rgba(255, 255, 255, .2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+.services:hover {
+    background: #6f4eca;
+    box-shadow: 0 0px 10px #9565d3, 0 0px 40px #9565d3, 0 0px 80px #9565d3;
+    cursor: pointer;
+}
+
+.services:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+.services:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/3rd.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box {
+    width: 380px;
+    height: 530px;
+    position: relative;
+    margin: 4% auto;
+    background: rgba(61, 61, 61, 0.5);
+    border: 1px solid black;
+    padding: 5px;
+    box-shadow: 4px 7px 30px 10px black;
+    overflow: hidden;
+}
+
+.button-box {
+    width: 230px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.input-group {
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    font: x-large;
+    color: rgb(224, 224, 224);
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    outline: none;
+    border: 0;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+.input-group span {
+    color: rgb(226, 226, 226);
+    font-size: 12px;
+    bottom: -28px;
+    left: 10px;
+    position: relative;
+}
+
+.input-group img {
+    margin: 5px auto;
+    border-radius: 50%;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+@media (max-width:780px) {
+    .form-box {
+        overflow: none;
+        overflow-y: auto;
+    }
+}
